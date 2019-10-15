@@ -1,7 +1,7 @@
-srping: 
-    profile: 
-        active: 
-        - dev
+spring: 
+  profiles: 
+    active: 
+    - dev
     
 ---
 server:
@@ -14,7 +14,7 @@ mybatis:
   - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
     
 spring:
-   profile: dev
+   profiles: dev
    application:
     name: microservicecloud-dept 
    datasource:
@@ -56,7 +56,7 @@ mybatis:
   - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
     
 spring:
-   profile: test
+   profiles: test
    application:
     name: microservicecloud-dept 
    datasource:
@@ -85,10 +85,3 @@ info:
   company.name: www.atguigu.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$        
-      
-      
-      
-      
-      
-      
-      

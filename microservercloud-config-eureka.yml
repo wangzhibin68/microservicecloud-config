@@ -1,13 +1,13 @@
-srping: 
-    profile: 
+spring: 
+    profiles: 
         active: 
         - dev
     
 ---
 server: 
   port: 7001
-srping: 
-    profile: dev
+spring: 
+    profiles: dev
     application: 
         name: microservicecloud-config-eureka
 eureka: 
@@ -22,8 +22,8 @@ eureka:
 ---
 server: 
   port: 7001
-srping: 
-    profile: test
+spring: 
+    profiles: test
     application: 
         name: microservicecloud-config-eureka
 eureka: 
@@ -35,6 +35,3 @@ eureka:
     service-url: 
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/       #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。
       
- 
-
- 
